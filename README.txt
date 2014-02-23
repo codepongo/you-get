@@ -48,6 +48,7 @@ Supported Sites (As of Now)
 * iQIYI (爱奇艺) http://www.iqiyi.com
 * Joy.cn (激动网) http://www.joy.cn
 * Ku6 (酷6网) http://www.ku6.com
+* LeTV (乐视网) http://www.letv.com
 * MioMio http://www.miomio.tv
 * NetEase (网易视频) http://v.163.com
 * PPTV http://www.pptv.com
@@ -179,6 +180,7 @@ For a complete list of all available options, see::
         -u | --url                               Display the real URLs of videos without downloading.
         -n | --no-merge                          Don't merge video parts.
         -o | --output-dir <PATH>                 Set the output directory for downloaded videos.
+        -p | --player <PLAYER [options]>         Directly play the video with PLAYER like vlc/smplayer.
         -x | --http-proxy <HOST:PORT>            Use specific HTTP proxy for downloading.
              --no-proxy                          Don't use any proxy. (ignore $http_proxy)
         -S | --sogou                             Use a Sogou proxy server for downloading.
