@@ -120,7 +120,10 @@ def xiami_download_album(aid, output_dir = '.', merge = True, info_only = False)
     for i in tracks:
         song_title = i.getElementsByTagName("title")[0].firstChild.nodeValue
         url = location_dec(i.getElementsByTagName("location")[0].firstChild.nodeValue)
-        lrc_url = i.getElementsByTagName("lyric")[0].firstChild.nodeValue
+        if i.getElementsByTagName("lyric")[0].firstChild is None:
+            lrc_url = ''
+        else:
+            lrc_url = i.getElementsByTagName("lyric")[0].firstChild.nodeValue
         if not pic_exist:
             pic_url = i.getElementsByTagName("pic")[0].firstChild.nodeValue
         type, ext, size = url_info(url, faker = True)
