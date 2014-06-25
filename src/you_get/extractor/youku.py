@@ -142,7 +142,7 @@ def youku_download_by_id(id, title, output_dir = '.', stream_type = None, merge 
     
     print_info(site_info, title, ext, total_size)
     if not info_only:
-        download_urls(urls, title, ext, total_size, output_dir, merge = merge)
+        download_urls(urls, title, ext, total_size, output_dir, merge = merge, faker = True)
 
 def parse_playlist_videos(html):
     return re.findall(r'id="A_(\w+)"', html)

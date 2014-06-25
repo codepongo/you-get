@@ -229,6 +229,7 @@ def get_content(url, headers={}, decoded=True):
     return data
 
 def url_size(url, faker = False):
+    print(url)
     if faker:
         response = request.urlopen(request.Request(url, headers = fake_headers), None)
     else:

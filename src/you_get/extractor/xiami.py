@@ -91,7 +91,10 @@ def xiami_download_showcollect(cid, output_dir = '.', merge = True, info_only = 
         album_name = i.getElementsByTagName("album_name")[0].firstChild.nodeValue
         song_title = i.getElementsByTagName("title")[0].firstChild.nodeValue
         url = location_dec(i.getElementsByTagName("location")[0].firstChild.nodeValue)
-        lrc_url = i.getElementsByTagName("lyric")[0].firstChild.nodeValue
+        if i.getElementsByTagName("lyric")[0].firstChild is None:
+            lrc_url = ''
+        else:
+            lrc_url = i.getElementsByTagName("lyric")[0].firstChild.nodeValue
         type, ext, size = url_info(url, faker = True)
         if not ext:
             ext = 'mp3'
