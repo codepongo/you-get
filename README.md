@@ -18,6 +18,7 @@ __中文说明__已移至[wiki](https://github.com/soimort/you-get/wiki/%E4%B8%A
 * Vimeo <http://vimeo.com>
 * Coursera <https://www.coursera.org>
 * Blip <http://blip.tv>
+* CBS <http://www.cbs.com>
 * Dailymotion <http://dailymotion.com>
 * eHow <http://www.ehow.com>
 * Facebook <http://facebook.com>
@@ -28,6 +29,7 @@ __中文说明__已移至[wiki](https://github.com/soimort/you-get/wiki/%E4%B8%A
 * Tumblr <http://www.tumblr.com>
 * Vine <http://vine.co>
 * Instagram <http://instagram.com>
+* Magisto <http://www.magisto.com>
 * SoundCloud <http://soundcloud.com>
 * Mixcloud <http://www.mixcloud.com>
 * Freesound <http://www.freesound.org>
@@ -37,8 +39,8 @@ __中文说明__已移至[wiki](https://github.com/soimort/you-get/wiki/%E4%B8%A
 * Youku (优酷) <http://www.youku.com>
 * Tudou (土豆) <http://www.tudou.com>
 * YinYueTai (音悦台) <http://www.yinyuetai.com>
-* AcFun <http://www.acfun.tv>
-* bilibili <http://www.bilibili.tv>
+* AcFun <http://www.acfun.com>
+* bilibili <http://www.bilibili.com>
 * CNTV (中国网络电视台) <http://www.cntv.cn>
 * Douban (豆瓣) <http://douban.com>
 * ifeng (凤凰视频) <http://v.ifeng.com>
@@ -59,56 +61,59 @@ __中文说明__已移至[wiki](https://github.com/soimort/you-get/wiki/%E4%B8%A
 * Baidu Wangpan (百度网盘) <http://pan.baidu.com>
 * SongTaste <http://www.songtaste.com>
 * Alive.in.th <http://alive.in.th>
+* VK <http://vk.com>
 
 ## Dependencies
 
 * [Python 3](http://www.python.org/download/releases/)
-* __(Optional)__ [FFmpeg](http://ffmpeg.org)
-    * Used for converting and joining video files.
+* __(Optional)__ [FFmpeg](http://ffmpeg.org) / [Libav](http://libav.org/)
+    * For converting and joining video files.
+* __(Optional)__ [RTMPDump](http://rtmpdump.mplayerhq.hu/)
+    * For processing RTMP streams.
 
 ## Installation
 
 ### 1. Install via Pip:
 
     $ [sudo] pip install you-get
-    
+
    Check if the installation was successful:
-    
+
     $ you-get -V
 
 ### 2. Install from Git:
 
     $ git clone git://github.com/soimort/you-get.git
-    
+
    Use the raw script without installation:
-    
+
     $ cd you-get/
     $ ./you-get -V
-    
+
    To install the package into the system path, execute:
-    
+
     $ make install
-    
+
    Check if the installation was successful:
-    
+
     $ you-get -V
 
 ### 3. Direct download (from <https://github.com/soimort/you-get/zipball/master>):
-    
+
     $ wget -O you-get.zip https://github.com/soimort/you-get/zipball/master
     $ unzip you-get.zip
-    
+
    Use the raw script without installation:
-    
+
     $ cd soimort-you-get-*/
     $ ./you-get -V
-    
+
    To install the package into the system path, execute:
-    
+
     $ make install
-    
+
    Check if the installation was successful:
-    
+
     $ you-get -V
 
 ### 4. Install from your distro's repo:
@@ -161,19 +166,22 @@ For a complete list of all available options, see:
 
     $ you-get --help
     Usage: you-get [OPTION]... [URL]...
-    
+
     Startup options:
         -V | --version                           Display the version and exit.
         -h | --help                              Print this help and exit.
-    
+
     Download options (use with URLs):
         -f | --force                             Force overwriting existed files.
         -i | --info                              Display the information of videos without downloading.
         -u | --url                               Display the real URLs of videos without downloading.
         -n | --no-merge                          Don't merge video parts.
+        -F | --format <STREAM_ID>                Video format code.
+        -c | --cookies                           Load NetScape's cookies.txt file.
         -o | --output-dir <PATH>                 Set the output directory for downloaded videos.
         -p | --player <PLAYER [options]>         Directly play the video with PLAYER like vlc/smplayer.
         -x | --http-proxy <HOST:PORT>            Use specific HTTP proxy for downloading.
+        -y | --extractor-proxy <HOST:PORT>       Use specific HTTP proxy for extracting stream data.
              --no-proxy                          Don't use any proxy. (ignore $http_proxy)
         -S | --sogou                             Use a Sogou proxy server for downloading.
              --sogou-proxy <HOST:PORT>           Run a standalone Sogou proxy server.
