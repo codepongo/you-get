@@ -42,7 +42,7 @@ def xiami_download_lyric(lrc_url, file_name, output_dir):
         break
 
     if len(lrc) > 0:
-        with open(output_dir + "/" + file_name.replace('/', '-').replace('?', '-') + '.lrc', 'w', encoding='utf-8') as x:
+        with open(output_dir + "/" + filename + '.lrc', 'w', encoding='utf-8') as x:
             x.write(lrc)
 
 def xiami_download_pic(pic_url, file_name, output_dir):
@@ -63,7 +63,10 @@ def xiami_download_song(sid, output_dir = '.', merge = True, info_only = False):
     album_name = i.getElementsByTagName("album_name")[0].firstChild.nodeValue
     song_title = i.getElementsByTagName("title")[0].firstChild.nodeValue
     url = location_dec(i.getElementsByTagName("location")[0].firstChild.nodeValue)
-    lrc_url = i.getElementsByTagName("lyric")[0].firstChild.nodeValue
+    try:
+        lrc_url = i.getElementsByTagName("lyric")[0].firstChild.nodeValue
+    except:
+        pass
     type, ext, size = url_info(url, faker = True)
     if not ext:
         ext = 'mp3'
@@ -91,10 +94,10 @@ def xiami_download_showcollect(cid, output_dir = '.', merge = True, info_only = 
         album_name = i.getElementsByTagName("album_name")[0].firstChild.nodeValue
         song_title = i.getElementsByTagName("title")[0].firstChild.nodeValue
         url = location_dec(i.getElementsByTagName("location")[0].firstChild.nodeValue)
-        if i.getElementsByTagName("lyric")[0].firstChild is None:
-            lrc_url = ''
-        else:
+        try:
             lrc_url = i.getElementsByTagName("lyric")[0].firstChild.nodeValue
+        except:
+            pass
         type, ext, size = url_info(url, faker = True)
         if not ext:
             ext = 'mp3'
@@ -123,10 +126,10 @@ def xiami_download_album(aid, output_dir = '.', merge = True, info_only = False)
     for i in tracks:
         song_title = i.getElementsByTagName("title")[0].firstChild.nodeValue
         url = location_dec(i.getElementsByTagName("location")[0].firstChild.nodeValue)
-        if i.getElementsByTagName("lyric")[0].firstChild is None:
-            lrc_url = ''
-        else:
+        try:
             lrc_url = i.getElementsByTagName("lyric")[0].firstChild.nodeValue
+        except:
+            pass
         if not pic_exist:
             pic_url = i.getElementsByTagName("pic")[0].firstChild.nodeValue
         type, ext, size = url_info(url, faker = True)

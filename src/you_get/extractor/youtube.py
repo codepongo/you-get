@@ -8,24 +8,24 @@ from ..common import *
 # taken from http://en.wikipedia.org/wiki/YouTube#Quality_and_codecs, 2/14/2014.
 yt_codecs = [
     {'itag': 38, 'container': 'MP4', 'video_resolution': '3072p', 'video_encoding': 'H.264', 'video_profile': 'High', 'video_bitrate': '3.5-5', 'audio_encoding': 'AAC', 'audio_bitrate': '192'},
-    {'itag': 85, 'container': 'MP4', 'video_resolution': '1080p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '3-4', 'audio_encoding': 'AAC', 'audio_bitrate': '192'},
+    #{'itag': 85, 'container': 'MP4', 'video_resolution': '1080p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '3-4', 'audio_encoding': 'AAC', 'audio_bitrate': '192'},
     {'itag': 46, 'container': 'WebM', 'video_resolution': '1080p', 'video_encoding': 'VP8', 'video_profile': '', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '192'},
     {'itag': 37, 'container': 'MP4', 'video_resolution': '1080p', 'video_encoding': 'H.264', 'video_profile': 'High', 'video_bitrate': '3-4.3', 'audio_encoding': 'AAC', 'audio_bitrate': '192'},
-    {'itag': 102, 'container': 'WebM', 'video_resolution': '720p', 'video_encoding': 'VP8', 'video_profile': '3D', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '192'},
+    #{'itag': 102, 'container': 'WebM', 'video_resolution': '720p', 'video_encoding': 'VP8', 'video_profile': '3D', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '192'},
     {'itag': 45, 'container': 'WebM', 'video_resolution': '720p', 'video_encoding': 'VP8', 'video_profile': '', 'video_bitrate': '2', 'audio_encoding': 'Vorbis', 'audio_bitrate': '192'},
-    {'itag': 84, 'container': 'MP4', 'video_resolution': '720p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '2-3', 'audio_encoding': 'AAC', 'audio_bitrate': '192'},
+    #{'itag': 84, 'container': 'MP4', 'video_resolution': '720p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '2-3', 'audio_encoding': 'AAC', 'audio_bitrate': '192'},
     {'itag': 22, 'container': 'MP4', 'video_resolution': '720p', 'video_encoding': 'H.264', 'video_profile': 'High', 'video_bitrate': '2-3', 'audio_encoding': 'AAC', 'audio_bitrate': '192'},
     {'itag': 120, 'container': 'FLV', 'video_resolution': '720p', 'video_encoding': 'H.264', 'video_profile': 'Main@L3.1', 'video_bitrate': '2', 'audio_encoding': 'AAC', 'audio_bitrate': '128'},
     {'itag': 44, 'container': 'WebM', 'video_resolution': '480p', 'video_encoding': 'VP8', 'video_profile': '', 'video_bitrate': '1', 'audio_encoding': 'Vorbis', 'audio_bitrate': '128'},
     {'itag': 35, 'container': 'FLV', 'video_resolution': '480p', 'video_encoding': 'H.264', 'video_profile': 'Main', 'video_bitrate': '0.8-1', 'audio_encoding': 'AAC', 'audio_bitrate': '128'},
-    {'itag': 101, 'container': 'WebM', 'video_resolution': '360p', 'video_encoding': 'VP8', 'video_profile': '3D', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '192'},
-    {'itag': 100, 'container': 'WebM', 'video_resolution': '360p', 'video_encoding': 'VP8', 'video_profile': '3D', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '128'},
+    #{'itag': 101, 'container': 'WebM', 'video_resolution': '360p', 'video_encoding': 'VP8', 'video_profile': '3D', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '192'},
+    #{'itag': 100, 'container': 'WebM', 'video_resolution': '360p', 'video_encoding': 'VP8', 'video_profile': '3D', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '128'},
     {'itag': 43, 'container': 'WebM', 'video_resolution': '360p', 'video_encoding': 'VP8', 'video_profile': '', 'video_bitrate': '0.5', 'audio_encoding': 'Vorbis', 'audio_bitrate': '128'},
     {'itag': 34, 'container': 'FLV', 'video_resolution': '360p', 'video_encoding': 'H.264', 'video_profile': 'Main', 'video_bitrate': '0.5', 'audio_encoding': 'AAC', 'audio_bitrate': '128'},
-    {'itag': 82, 'container': 'MP4', 'video_resolution': '360p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '0.5', 'audio_encoding': 'AAC', 'audio_bitrate': '96'},
+    #{'itag': 82, 'container': 'MP4', 'video_resolution': '360p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '0.5', 'audio_encoding': 'AAC', 'audio_bitrate': '96'},
     {'itag': 18, 'container': 'MP4', 'video_resolution': '270p/360p', 'video_encoding': 'H.264', 'video_profile': 'Baseline', 'video_bitrate': '0.5', 'audio_encoding': 'AAC', 'audio_bitrate': '96'},
     {'itag': 6, 'container': 'FLV', 'video_resolution': '270p', 'video_encoding': 'Sorenson H.263', 'video_profile': '', 'video_bitrate': '0.8', 'audio_encoding': 'MP3', 'audio_bitrate': '64'},
-    {'itag': 83, 'container': 'MP4', 'video_resolution': '240p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '0.5', 'audio_encoding': 'AAC', 'audio_bitrate': '96'},
+    #{'itag': 83, 'container': 'MP4', 'video_resolution': '240p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '0.5', 'audio_encoding': 'AAC', 'audio_bitrate': '96'},
     {'itag': 13, 'container': '3GP', 'video_resolution': '', 'video_encoding': 'MPEG-4 Visual', 'video_profile': '', 'video_bitrate': '0.5', 'audio_encoding': 'AAC', 'audio_bitrate': ''},
     {'itag': 5, 'container': 'FLV', 'video_resolution': '240p', 'video_encoding': 'Sorenson H.263', 'video_profile': '', 'video_bitrate': '0.25', 'audio_encoding': 'MP3', 'audio_bitrate': '64'},
     {'itag': 36, 'container': '3GP', 'video_resolution': '240p', 'video_encoding': 'MPEG-4 Visual', 'video_profile': 'Simple', 'video_bitrate': '0.175', 'audio_encoding': 'AAC', 'audio_bitrate': '36'},
@@ -35,7 +35,7 @@ yt_codecs = [
 def decipher(js, s):
     def tr_js(code):
         code = re.sub(r'function', r'def', code)
-        code = re.sub(r'\$', '_', code)
+        code = re.sub(r'\$', '_dollar', code)
         code = re.sub(r'\{', r':\n\t', code)
         code = re.sub(r'\}', r'\n', code)
         code = re.sub(r'var\s+', r'', code)
@@ -46,17 +46,17 @@ def decipher(js, s):
         code = re.sub(r'(\w+).split\(""\)', r'list(\1)', code)
         return code
 
-    f1 = match1(js, r'\w+\.sig\|\|(\w+)\(\w+\.\w+\)')
-    f1def = match1(js, r'(function %s\(\w+\)\{[^\{]+\})' % f1)
+    f1 = match1(js, r'\w+\.sig\|\|([$\w]+)\(\w+\.\w+\)')
+    f1def = match1(js, r'(function %s\(\w+\)\{[^\{]+\})' % re.escape(f1))
     code = tr_js(f1def)
     f2 = match1(f1def, r'([$\w]+)\(\w+,\d+\)')
     if f2 is not None:
         f2e = re.escape(f2)
         f2def = match1(js, r'(function %s\(\w+,\w+\)\{[^\{]+\})' % f2e)
-        f2 = re.sub(r'\$', r'_', f2)
+        f2 = re.sub(r'\$', '_dollar', f2)
         code = code + 'global %s\n' % f2 + tr_js(f2def)
 
-    code = code + 'sig=%s(s)' % f1
+    code = code + 'sig=%s(s)' % re.sub(r'\$', '_dollar', f1)
     exec(code, globals(), locals())
     return locals()['sig']
 
@@ -74,7 +74,7 @@ def youtube_download_by_id(id, title=None, output_dir='.', merge=True, info_only
     else:
         # Parse video page when video_info is not usable.
         video_page = get_content('http://www.youtube.com/watch?v=%s' % id)
-        ytplayer_config = json.loads(match1(video_page, r'ytplayer.config\s*=\s*([^\n]+);'))
+        ytplayer_config = json.loads(match1(video_page, r'ytplayer.config\s*=\s*([^\n]+});'))
 
         title = ytplayer_config['args']['title']
         stream_list = ytplayer_config['args']['url_encoded_fmt_stream_map'].split(',')
@@ -97,10 +97,11 @@ def youtube_download_by_id(id, title=None, output_dir='.', merge=True, info_only
     url = download_stream['url'][0]
     if 'sig' in download_stream:
         sig = download_stream['sig'][0]
-    else:
+        url = '%s&signature=%s' % (url, sig)
+    elif 's' in download_stream:
         js = get_content(html5player)
         sig = decipher(js, download_stream['s'][0])
-    url = '%s&signature=%s' % (url, sig)
+        url = '%s&signature=%s' % (url, sig)
 
     type, ext, size = url_info(url)
 
@@ -122,6 +123,7 @@ def youtube_download(url, output_dir='.', merge=True, info_only=False):
     """
 
     id = match1(url, r'youtu.be/([^/]+)') or \
+        match1(url, r'youtube.com/embed/([^/]+)') or \
         parse_query_param(url, 'v') or \
         parse_query_param(parse_query_param(url, 'u'), 'v')
     if id is None:

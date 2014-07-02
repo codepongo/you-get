@@ -17,17 +17,15 @@ class YouGetTests(unittest.TestCase):
             "http://www.freesound.org/people/Corsica_S/sounds/184419/",
         ])
 
+    def test_magisto(self):
+        test_urls([
+            "http://www.magisto.com/album/video/f3x9AAQORAkfDnIFDA",
+        ])
+
     def test_mixcloud(self):
         test_urls([
             "http://www.mixcloud.com/beatbopz/beat-bopz-disco-mix/",
             "http://www.mixcloud.com/DJVadim/north-america-are-you-ready/",
-        ])
-
-    def test_sohu(self):
-        test_urls([
-            "http://tv.sohu.com/20120522/n343785589.shtml",
-            "http://tv.sohu.com/20130103/n362246415.shtml",
-            "http://tv.sohu.com/20130103/n362251239.shtml"
         ])
 
     def test_ted(self):
