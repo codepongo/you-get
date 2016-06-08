@@ -9,8 +9,10 @@ def tudou_download_by_iid(iid, title, output_dir = '.', merge = True, info_only 
     vids = []
     for k in data:
         if len(data[k]) > 0:
-            vids.append({"k": data[k][0]["k"], "size": data[k][0]["size"]})
-
+            try:
+                vids.append({"k": data[k][0]["k"], "size": data[k][0]["size"]})
+            except:
+                pass
     temp = max(vids, key=lambda x:x["size"])
     vid, size = temp["k"], temp["size"]
 
